@@ -109,6 +109,28 @@ img {
 /* CONTEUDO / CONTENT */
 .content {
     grid-area: content;
+
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* esse col-wide eh para ocupar a linha inteira, as duas colunas no caso e o 1 / -1 eh para fazer isso */
+.col-wide {
+    grid-column: 1 / -1;
+}
+
+.imagem-1 {
+    /* quero que esse item ocupe duas linhas, ou seja, dois itens do container */
+    grid-row: span 2;
+    align-self: end;
+}
+
+.imagem-2 {
+    align-self: end;
 }
 
 /* ANUNCIOS */
