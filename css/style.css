@@ -133,6 +133,110 @@ img {
     align-self: end;
 }
 
+/* estilos content */
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    letter-spacing: -0.005em;
+    color: rgba(0, 0, 0, .7);
+}
+
+/* p mais p pq quero falar com o p que vem apos um p */
+.informacoes p + p {
+    margin-top: 30px;
+}
+
+.titulo {
+    color: #B07DFB;
+}
+
+.titulo h1 {
+    font-size: 3.75em;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.titulo span {
+    /* 0.875 equivale a quase o 14px */
+    font-size: 0.875em;
+    font-style: italic;
+}
+
+/* caracteristicas */
+.caracteristicas {
+    display: flex;
+    align-items: flex-start;
+}
+
+.caracteristicas span {
+    display: block;
+    color: #B07DFB;
+}
+
+.caracteristicas > div {
+    /* esse maior eh para falar somente com a div direta das caracteristicas */
+    width: 80px;
+    text-align: center;
+    background: linear-gradient(135deg, #8844ee, #B07DFB);
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+    position: relative;
+}
+
+.caracteristicas > div:first-child {
+    margin-right: 30px;
+}
+
+.numero {
+    color: #B07DFB;
+    font-size: 3em;
+    line-height: 1;
+    margin: 10px auto;
+}
+
+.rotulo {
+    background: #fff;
+    border-radius: 0 0 5px 5px;
+    padding: 5px 0;
+    position: relative;
+    top: 2px;
+}
+
+.destaque {
+    font-size: 0.875em;
+    color: #B07DFB;
+    max-width: 16em;
+}
+
+.citacao, .atributos {
+    align-self: start;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+    background: linear-gradient(135deg, #8844ee, #b07dfb);
+}
+
+.citacao p {
+    font-size: 1.5em;
+    font-style: italic;
+    text-align: center;
+    color: #fff;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.atributos li {
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.125em;
+    padding: 15px;
+}
+
+/* quero falar com o li que venha depois de um li */
+.atributos li + li {
+    border-top: 2px solid #b07dfb;
+}
+
 /* ANUNCIOS */
 .anuncios {
     grid-area: anuncios;
