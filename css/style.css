@@ -16,16 +16,18 @@ a {
 }
 
 img {
-    max-width: 100px;
+    max-width: 100%;
 }
+
+
 
 /* Estrutura Geral */
 
 .estrutura {
     display: grid;
     grid-template-columns: minmax(160px, 1fr) 3fr 300px;
-    /* esse minmax eh so para a primeira coluna, ou seja, do sidenav, aí vai de no minimo 160px a no maximo 1fr 
-    esse 3fr eh do conteúdo*/
+    /* esse minmax eh so para a primeira coluna, ou seja, do sidenav, aí vai de no minimo 160px a 
+    no maximo 1fr esse 3fr eh do conteúdo*/
     grid-template-areas: 
         "header header header"
         "sidenav content anuncios"
@@ -33,9 +35,50 @@ img {
     ;
 }
 
+/* header */
 .header {
     grid-area: header;
+
+    background: linear-gradient(135deg, #8844ee, #B07DFB);
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    /* esse grid template colums eh para colocar o menu um ao lado do outro, no auto, ele fica do tamanho que 
+    eh o conteúdo */
+    align-items: center;
 }
+
+.logo {
+    max-width: 200px;
+}
+
+.header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header nav a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    font-size: 1.125em;
+    /* 1.125 em eh 18px dividido por 16px */
+    background: rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    transition: 0.1s;
+}
+
+.header nav a:hover {
+    background: rgba(0, 0, 0, .5); 
+}
+
+/* coloquei li + li, pois quero falar com o li que vem depois de um li, para não ficar a margin-right no primeiro li */
+.header li + li {
+    margin-left: 30px;
+}
+
+
+
 
 .sidenav {
     grid-area: sidenav;
@@ -52,3 +95,4 @@ img {
 .footer {
     grid-area: footer;
 }
+
