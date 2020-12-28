@@ -105,6 +105,21 @@ img {
     margin-left: 30px;
 }
 
+@media (max-width: 760px) {
+    .header {
+        grid-template-columns: auto;
+    }
+    .logo {
+        margin-bottom: 20px;
+    }
+    .header nav a {
+        font-size: 1em;
+    }
+    .header li + li {
+        margin-left: 10px;
+    }
+}
+
 /* SIDENAV */
 
 .sidenav {
@@ -131,6 +146,52 @@ img {
     background: #B07DFB;
 }
 
+@keyframes seta {
+    from {
+        right: 30px;
+    }
+    to {
+        right: 20px;
+    }
+}
+
+@media (max-width: 760px) {
+    .sidenav {
+        /* position relative para a seta do after ficar em relacao ao sidenav e nao ao body geral */
+        position: relative;
+        /* esse overflow-x auto eh para criar a barra para navegar pelo sidenav pelo mobile */
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        /* esse webkit eh para funcionar melhor com o touch no iphone e no safari. Já o MS eh para funcionar
+        melhor no edge da microsoft */
+    }
+
+    .sidenav::after {
+        content: "→";
+        position: absolute;
+        top: 5px;
+        right: 30px;
+        color: rgba(0,0,0,.3);
+        /* essa animation eh do keyframes ali de cima, eh ease-in para começar rapido e ai ir devagar e 0s
+        para começar rapido e infinite para sempre ficar ocorrendo e alternate para ir do 30 para o 20 e aí do
+        20 para o 30 */
+        animation: seta .5s ease-in 0s infinite alternate;
+    }
+    .sidenav ul {
+        display: flex;
+    }
+    .sidenav li {
+        /* não quero que ele diminua mais do que 60px */
+        flex: 1 0 60px;
+    }
+    .sidenav {
+        padding: 0 30px;
+    }
+    .sidenav li a {
+        margin: 30px 30px 30px 0;
+    }
+}
 
 /* CONTEUDO / CONTENT */
 .content {
