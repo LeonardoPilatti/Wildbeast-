@@ -37,6 +37,32 @@ img {
     ;
 }
 
+@media (max-width: 1200px) {
+    .estrutura {
+        /* foi duplicado a terceira coluna pois seme ela, iria ocupar somente duas e ficar sobrando uma */
+        grid-template-areas: 
+            "header header header"
+            "sidenav content content"
+            "sidenav anuncios anuncios"
+            "footer footer footer"
+        ;
+    }
+}
+
+
+@media (max-width: 760px) { 
+    .estrutura {
+        grid-template-columns: 100%;
+        grid-template-areas: 
+            "header"
+            "sidenav"
+            "content"
+            "anuncios"
+            "footer"
+        ;
+    }
+}
+
 /* header */
 .header {
     grid-area: header;
