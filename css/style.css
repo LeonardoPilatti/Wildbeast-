@@ -16,7 +16,9 @@ a {
 }
 
 img {
+    display: block;
     max-width: 100%;
+    border-radius: 5px;
 }
 
 
@@ -112,10 +114,22 @@ img {
 /* ANUNCIOS */
 .anuncios {
     grid-area: anuncios;
+
+    background: #fafbfc;
+    display: grid;
+    align-content: start;
+    padding: 30px;
+    /* esse gap eh o que separa um item do outro, eh a distancia de um item para outro */
+    gap: 30px;
 }
 
 /* FOOTER */
 .footer {
     grid-area: footer;
+
+    background: linear-gradient(135deg, #8844ee, #B07DFB);
+    color: #fff;
+    text-align: center;
+    padding: 30px;
 }
 
