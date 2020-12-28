@@ -1,0 +1,54 @@
+body, p, h1, ul, li, blockquote {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: 'Vollkorn SC', Georgia, serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100px;
+}
+
+/* Estrutura Geral */
+
+.estrutura {
+    display: grid;
+    grid-template-columns: minmax(160px, 1fr) 3fr 300px;
+    /* esse minmax eh so para a primeira coluna, ou seja, do sidenav, aí vai de no minimo 160px a no maximo 1fr 
+    esse 3fr eh do conteúdo*/
+    grid-template-areas: 
+        "header header header"
+        "sidenav content anuncios"
+        "footer footer footer"
+    ;
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidenav {
+    grid-area: sidenav;
+}
+
+.content {
+    grid-area: content;
+}
+
+.anuncios {
+    grid-area: anuncios;
+}
+
+.footer {
+    grid-area: footer;
+}
